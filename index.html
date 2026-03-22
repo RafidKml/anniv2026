@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Years With You</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- BACKGROUND -->
+    <div class="bg"></div>
+    <button id="musicBtn" onclick="toggleMusic()">🔊</button>
+
+    <!-- LOADING SCREEN -->
+    <div id="loading">
+      <h1>Loading our memories...</h1>
+    </div>
+
+    <!-- OPENING -->
+    <section id="opening">
+      <h1 class="title">3 Years With You</h1>
+      <p class="subtitle">A little world I made just for you</p>
+      <button onclick="start()">Enter</button>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" class="hidden">
+      <div class="content">
+        <h2>Our Beginning</h2>
+        <p>
+          Dari awal yang ga disengaja, dari obrolan random yang ga penting,
+          sampe akhirnya jadi sesuatu yang ga bisa mpit jelasin pake kata biasa.
+        </p>
+        <p>
+          Banyak hal yang udah kita lewatin. Ga selalu mulus, ga selalu gampang,
+          tapi anehnya... mpit tetep di sini.
+        </p>
+        <p>Dan jujur aja, mpit ga pernah nyesel.</p>
+      </div>
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section id="memories" class="hidden">
+      <h2>Memories</h2>
+      <div class="gallery">
+        <img src="assets/photos1.jpg" />
+        <img src="assets/photos2.jpg" />
+        <img src="assets/photos3.jpg" />
+        <img src="assets/photos4.jpg" />
+        <img src="assets/photos5.jpg" />
+        <img src="assets/photos6.jpg" />
+      </div>
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="hidden">
+      <h2>Our Journey</h2>
+      <div class="timeline">
+        <div class="item">
+          <h3>2023-2024</h3>
+          <p>
+            Awal kenal, masih canggung, masih jaga image. Tapi dari situ
+            pelan-pelan jadi nyaman.
+          </p>
+        </div>
+        <div class="item">
+          <h3>2024-2025</h3>
+          <p>
+            Mulai banyak hal yang dilewatin bareng. Belajar ngerti, belajar
+            sabar, walaupun ga selalu gampang.
+          </p>
+        </div>
+        <div class="item">
+          <h3>2025-2026</h3>
+          <p>
+            Masih ada, masih milih satu sama lain. Dan itu udah lebih dari
+            cukup.
+          </p>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <!-- MESSAGE -->
+    <section id="message" class="hidden">
+      <div class="content">
+        <h2>For You</h2>
+        <p>
+          Mpit tau mpit bukan yang paling sempurna. Kadang nyebelin, kadang
+          egois, kadang bikin kesel.
+        </p>
+        <p>Tapi satu hal yang ga pernah berubah, mpit selalu milih sayang.</p>
+        <p>
+          3 tahun ini bukan waktu yang sebentar. Dan mpit pengen masih banyak
+          tahun lagi bareng sayang.
+        </p>
+        <p>Makasih udah bertahan. Makasih udah tetep di sini.</p>
+      </div>
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE SECTION -->
+    <section id="interactive" class="hidden">
+      <h2>Tap Something</h2>
+      <div class="shape-wrapper">
+        <button class="shape love" onclick="showPopup('love')">❤️</button>
+        <button class="shape miss" onclick="showPopup('miss')">🥺</button>
+        <button class="shape future" onclick="showPopup('future')">💍</button>
+      </div>
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <!-- POPUP -->
+    <div id="popup" class="hidden">
+      <div class="popup-content">
+        <p id="popupText"></p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+
+    <!-- FINAL -->
+    <section id="final" class="hidden">
+      <h1 class="final-text">Happy 3rd Anniversary ❤️</h1>
+      <p>I Love You More Than Yesterday</p>
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <!-- EXTRA FILLER UI BIAR GA KOSONG -->
+    <section class="hidden">
+      <h2>Kenapa mpit sayang banget sama sayang?</h2>
+
+      <p class="reason">Cara sayang peduli, tanpa harus diminta</p>
+      <p class="reason">Cara sayang selalu ada, bahkan di hal kecil</p>
+      <p class="reason">Cara sayang bikin semuanya jadi ringan</p>
+      <p class="reason">Cara sayang ngerti aku, tanpa banyak kata</p>
+      <p class="reason">Dan mungkin yaa karna emang sayang orangnya</p>
+
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <section class="decor hidden">
+      <h2>Still Counting...</h2>
+      <p>Because this is not the end.</p>
+      <div id="timeCounter"></div>
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <section class="decor hidden">
+      <h2>You & Me</h2>
+      <p>No explanation needed.</p>
+      <div class="nav-buttons">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <section id="letter" class="hidden">
+      <h2>Untuk Sayangku</h2>
+
+      <div class="letterBox">
+        <div id="letterPlaceholder">Klik play dulu ya 🤍</div>
+        <div id="typing" class="hiddenText"></div>
+      </div>
+
+      <div class="letterActions">
+        <button id="btnPlay">▶ Play</button>
+        <button id="btnReplay">🔁 Replay</button>
+      </div>
+
+      <div class="nav-btns">
+        <button onclick="prevSection()">Back</button>
+        <button onclick="nextSection()">Next</button>
+      </div>
+    </section>
+
+    <section class="decor hidden">
+      <h2>Forever?</h2>
+      <p>We will see. But I want it.</p>
+      <div class="final-actions">
+        <button onclick="goToStart()">Back to Start</button>
+        <a
+          href="https://wa.me/6281299118927?text=Aku%20udah%20liat%20web%20nya%20🥺❤️"
+          target="_blank"
+        >
+          <button>Kirim ke sayang</button>
+        </a>
+      </div>
+    </section>
+
+    <!-- AUDIO -->
+    <audio id="bgm" loop>
+      <source src="assets/music.mp3" type="audio/mp3" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
